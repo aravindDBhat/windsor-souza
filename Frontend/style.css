@@ -1,0 +1,344 @@
+/* .Navbar*/
+.box {
+  height: 400px;
+  width: 400px;
+  background-color: #2c3e50;
+}
+.nav {
+  background: #fff;
+  padding: 20px 20px 15px 20px;
+  width: 100%;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: fixed;
+  z-index: 1000;
+}
+.hiddenNav {
+  top: -100px;
+}
+.logo {
+  margin-left: 30px;
+}
+.logo h4 {
+  margin-left: 7px;
+  margin: 4px;
+}
+.logo a {
+  display: flex;
+  color: black;
+  text-align: center;
+  align-items: center;
+  text-decoration: none;
+}
+.nav ul {
+  float: right;
+  margin-right: 20px;
+  display: flex;
+  flex-direction: row;
+  list-style: none;
+}
+.nav ul li {
+  margin: 0 5px;
+}
+.nav ul li a {
+  color: black;
+  padding: 0px 13px;
+  border-radius: 3px;
+  text-decoration: none;
+}
+a.active,
+a:hover {
+  background: #fff;
+  transition: 0.5s;
+}
+.checkbtn {
+  font-size: 34px;
+  color: black;
+  float: right;
+  line-height: 80px;
+  margin-right: 30px;
+  cursor: pointer;
+  display: none;
+}
+#check {
+  display: none;
+  float: right;
+}
+
+/* Home */
+.home {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  text-align: center;
+  align-items: center;
+  background-color: #384eb6;
+}
+.row {
+  width: 90%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-template-areas: "heading image";
+  grid-gap: 50px;
+  align-items: center;
+  text-align: center;
+  place-items: center;
+  overflow-x: hidden;
+  padding: 7rem 0;
+}
+.row .homeImage {
+  overflow: hidden;
+  grid-area: image;
+}
+.row .homeImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.row .homeHeadding {
+  width: 100%;
+  display: flex;
+  text-align: justify;
+  align-items: center;
+  padding: 30px;
+  grid-area: heading;
+}
+.row .homeHeadding .content h1 {
+  font-size: 40px;
+  font-weight: 700;
+  color: white;
+  padding-bottom: 20px;
+}
+.row .homeHeadding p {
+  font-size: 16px;
+  line-height: 25px;
+  font-weight: 600;
+  color: white;
+  padding-bottom: 25px;
+}
+.row .homeHeadding .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+.row .homeHeadding .buttons button {
+  width: 150px;
+}
+.row .homeHeadding .buttons a {
+  margin: 20px 0 0 25px;
+  color: white;
+}
+
+/* About*/
+
+.about {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  text-align: center;
+  align-items: center;
+  padding: 3rem 1rem;
+  background-color: #fff;
+}
+.row2 {
+  width: 90%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+
+  text-align: center;
+  place-items: center;
+  overflow-x: hidden;
+}
+.row2 .steps {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  padding: 10px;
+}
+.row2 .steps .content h1 {
+  font-size: 20px;
+  font-weight: 700;
+  color: rgb(19, 28, 120);
+  margin-bottom: 0;
+  font-family: "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+.row2 .steps p {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 500;
+  color: rgb(164, 160, 207);
+  padding-bottom: 25px;
+  font-family: "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+}
+
+/* SERVICE SECTION*/
+
+.service {
+  display: grid;
+  width: 100%;
+  place-items: center;
+  align-items: center;
+  background-color: #000;
+}
+.service h2 {
+  text-align: justify;
+  float: left;
+  color: white;
+  font-weight: 700;
+  margin-bottom: 50px;
+}
+.row3 {
+  width: 100%;
+  max-width: 1170px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 50px;
+  align-items: center;
+  text-align: center;
+  place-items: center;
+  overflow-x: hidden;
+  padding: 0rem 0;
+}
+.carousel-item {
+  z-index: 0;
+}
+.row3 .serviceImage {
+  overflow: hidden;
+  padding: 20px;
+}
+.row3 .serviceImage img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.row3 .serviceHeadding {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  text-align: initial;
+  align-items: center;
+  padding: 30px;
+  background-color: #000;
+}
+.row3 .serviceHeadding .content {
+  display: flex;
+  flex-direction: column;
+}
+.row3 .serviceHeadding .content h3 {
+  font-size: 28px;
+  font-weight: 700;
+  color: white;
+  padding-bottom: 20px;
+}
+.row3 .serviceHeadding ul {
+  display: flex;
+  flex-direction: column;
+}
+.row3 .serviceHeadding ul li {
+  font-size: 18px;
+  display: inline-block;
+  font-weight: 500;
+  color: white;
+  list-style: none;
+  padding: 6px;
+}
+.row3 .serviceHeadding ul li:hover {
+  background-color: #9da9e3;
+  transform: scale(1.03);
+  transition: 0.9s all;
+}
+.row3 .serviceHeadding ul li i {
+  font-size: 19px;
+  margin-right: 10px;
+}
+.row3 .serviceHeadding .buttons {
+  display: flex;
+  flex-direction: row;
+  justify-content: start;
+  align-items: center;
+  text-align: center;
+}
+.row3 .serviceHeadding .buttons button {
+  width: 250px;
+}
+
+@media screen and (max-width: 799px) {
+  .nav {
+    padding: 0;
+  }
+  .checkbtn {
+    display: block;
+  }
+  label.logo {
+    font-size: 22px;
+  }
+  .nav ul {
+    position: fixed;
+    flex-direction: column;
+    width: 100%;
+    background: #fff;
+    top: 80px;
+    left: -1000px;
+    text-align: center;
+    transition: all 0.5s;
+  }
+  .nav ul li {
+    display: block;
+    margin: 20px 0;
+    line-height: 10px;
+  }
+  .nav ul li a {
+    font-size: 20px;
+  }
+  a:hover,
+  a.active {
+    background: none;
+    color: #0082e6;
+  }
+  #check:checked ~ ul {
+    left: 0px;
+  }
+  .home {
+    padding-top: 30px;
+  }
+  .row {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "image"
+      "heading";
+    grid-gap: 50px;
+  }
+  .row .homeHeadding {
+    padding: 0px;
+  }
+  .row .homeHeadding .buttons {
+    flex-direction: column;
+    justify-content: center;
+  }
+  .row .homeHeadding .buttons {
+    margin-left: -50px;
+  }
+  .row2 {
+    grid-template-columns: 1fr;
+    grid-gap: 10px;
+  }
+  .steps {
+    width: 100%;
+  }
+  .row2 .steps p {
+    text-align: justify;
+  }
+  .row3 {
+    grid-template-columns: 1fr;
+    grid-gap: 50px;
+  }
+}
