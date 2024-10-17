@@ -7,12 +7,16 @@ const path = require("path");
 const app = express();
 const port = 4000;
 
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://windsor-souza-i5cx.vercel.app",
+    methods: "GET,POST",
+    allowedHeaders: ["Content-Type", "Authorization"],
+  })
+);
 
 app.use(bodyParser.json());
 app.use(express.json());
-
-app.use(express.static(path.join(__dirname, "../Frontend")));
 
 const db = mysql.createConnection({
   host: "localhost",
@@ -26,10 +30,6 @@ db.connect((err) => {
     return;
   }
   console.log("Connected to MySQL");
-});
-
-app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../Frontend/index.html"));
 });
 
 app.post("/submit-form", (req, res) => {
