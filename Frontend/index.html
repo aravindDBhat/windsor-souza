@@ -28,17 +28,17 @@
             </a></label>
         <ul>
 
-            <li><a href="#">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Services</a></li>
-            <li><a href="#">Contact</a></li>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#service">Services</a></li>
+            <li><a href="#contact">Contact</a></li>
         </ul>
 
         <label for="check" class="checkbtn">
             <i class="bi bi-list"></i>
         </label>
     </div>
-    <div class="home" data-aos="fade-down" data-aos-duration="800">
+    <div id="home" class="home" data-aos="fade-down" data-aos-duration="800">
         <div class="row">
             <div class="homeHeadding">
                 <div class="content">
@@ -48,7 +48,7 @@
                         them a competitive edge. A brand
                         strategy and design studio operating out of Bangalore, India.
                     </p>
-                    <div class="buttons"><a class="mt-4" href=""><button
+                    <div class="buttons"><a class="mt-4" href="#contact"><button
                                 class="btn btn-light btn-lg">Contact</button></a>
                         <a href="" class='link'>Get Started</a>
                     </div>
@@ -67,7 +67,7 @@
     <!--ABOUT SECTION-->
 
 
-    <div class="about" data-aos="fade-up" data-aos-duration="1500">
+    <div id="about" class="about" data-aos="fade-up" data-aos-duration="1500">
         <h2>Our Core Values That Drive Success</h2>
         <p>We build on innovation, prioritize customer needs, uphold sustainability, and guarantee quality through
             expertise.</p>
@@ -130,13 +130,10 @@
     <!--SERVICE SECTION-->
 
 
-    <div class="service" data-aos="fade-up" data-aos-duration="1300">
+    <div id="service" class="service" data-aos="fade-up" data-aos-duration="1300">
 
         <div class="row3">
             <div class="serviceImage">
-
-
-
 
                 <div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -158,12 +155,6 @@
                     </div>
                 </div>
 
-
-
-
-
-
-
             </div>
             <div class="serviceHeadding">
                 <div class="content">
@@ -180,9 +171,8 @@
 
                         <li><i class="bi bi-9-circle-fill"></i>Illustrations & Animations</li>
 
-
                     </ul>
-                    <div class="buttons"><a class="mt-4" href=""><button
+                    <div class="buttons"><a class="mt-4" href="#contact"><button
                                 class="btn btn-light btn-lg">Contact</button></a>
                     </div>
 
@@ -195,7 +185,90 @@
     </div>
 
 
-    <script src="server.js"></script>
+
+    <!--CONTACT SECTION-->
+
+    <div id="contact" class="contact" data-aos="fade-up" data-aos-duration="1300">
+        <h1>Contact Form</h1>
+        <form id="contactForm">
+            <div class="input">
+                <div class="textboxs"><label class="lable" for="name">Name</label><input id="name" name="name"
+                        type="text" placeholder="Your Name" required>
+
+                </div>
+                <div><label class="lable" for="email">Email</label><input id="email" type="email" name="email"
+                        placeholder="Email" required>
+
+                </div>
+
+            </div>
+            <div><label class="lable" for="select">Role</label>
+
+                <select class="mt-2" id="select" aria-label="Default select example" name="role" required>
+                    <option value="" disabled selected>Select Option</option>
+                    <option value="Designer">Designer</option>
+                    <option value="Developer">Developer</option>
+                    <option value="Analyst">Analyst</option>
+                    <option value="Devopes">Devopes</option>
+                </select>
+
+            </div>
+            <div><label class="lable" for="select">Message</label><textarea name="message" id="message"
+                    placeholder="Your Message" required></textarea></div>
+            <div class="checkbox">
+                <div><span>Opt-In</span></div>
+                <div><input type="checkbox" id="opt1" name="opt-in1">
+                    <h5>Marketing Emails</h5>
+                </div>
+                <div><input type="checkbox" id="opt2" name="opt-in">
+                    <h5>News and Updates Emails</h5>
+                </div>
+
+                <div><input type="checkbox" id="opt3" name="opt-in">
+                    <h5>Production Process Emails</h5>
+                </div>
+
+
+
+            </div>
+            <div><button class="btn btn-light btn-lg" type="submit">Submit</button></div>
+
+        </form>
+
+    </div>
+    <!--FOOTER SECTION -->
+    <footer data-aos="fade-up" data-aos-duration="1300">
+        <div class="contain">
+            <div class="footerContent">
+                <h3>Contact Us</h3>
+                <p>Email:aravindbhat88@gmail.com</p>
+                <p>Phone:+91 0123456789</p>
+                <p>Address:Building Street City 123456 </p>
+            </div>
+            <div class="footerContent">
+                <h3>Quick Links</h3>
+                <ul class="list">
+                    <li><a href="">Home</a></li>
+                    <li><a href="">About</a></li>
+                    <li><a href="">Services</a></li>
+                    <li><a href="">Products</a></li>
+                    <li><a href="">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footerContent">
+                <h3>Follow Us</h3>
+                <ul class="socialIcons">
+                    <li><a href=""><i class="bi bi-facebook"></i></a></li>
+                    <li><a href=""><i class="bi bi-instagram"></i></a></li>
+                    <li><a href=""><i class="bi bi-linkedin"></i></i></a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="bottom-bar">
+            <p>&copy; 2023 your company . All rights reserved</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
 
 
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
