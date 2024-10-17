@@ -76,7 +76,7 @@ document
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert(error);
+        alert(error.message);
       });
 
     console.log(payload);
