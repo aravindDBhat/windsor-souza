@@ -76,7 +76,7 @@ document
       })
       .catch((error) => {
         console.error("Error:", error);
-        alert(error.message);
+        alert("Data is not submitted");
       });
 
     console.log(payload);
