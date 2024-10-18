@@ -25,7 +25,7 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname, "../Frontend")));
+app.use(express.static(path.join(__dirname, "./Frontend")));
 
 const db = mysql.createConnection({
   host: "localhost",
@@ -42,7 +42,7 @@ db.connect((err) => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "../Frontend/index.html"));
+  res.sendFile(path.join(__dirname, "./Frontend/index.html"));
 });
 
 app.post("/submit-form", (req, res) => {
