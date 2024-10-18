@@ -55,7 +55,7 @@ app.post("/", (req, res) => {
     NewsUpdatesEmails,
     ProductionProcessEmails,
   } = req.body;
-  console.log(req.body);
+  console.log("payload: ", req.body);
 
   const query = `INSERT INTO FormData (Name, Email, Role, Message, MarketingEmails, NewsUpdatesEmails, ProductionProcessEmails) VALUES (?, ?, ?, ?, ?, ?, ?)`;
 
