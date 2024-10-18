@@ -28,10 +28,10 @@ app.use(
 app.use(express.static(path.join(__dirname, "./Frontend")));
 
 const db = mysql.createConnection({
-  host: "localhost",
-  user: "root",
-  password: "",
-  database: "windsoresouza",
+  host: "sql12.freesqldatabase.com",
+  user: "sql12738773",
+  password: "gYiidSTrhy",
+  database: "sql12738773",
 });
 
 db.connect((err) => {
@@ -56,7 +56,7 @@ app.post("/submit-form", (req, res) => {
     ProductionProcessEmails,
   } = req.body;
 
-  const query = `INSERT INTO formdata (Name, Email, Role, Message, MarketingEmails, NewsUpdatesEmails, ProductionProcessEmails) VALUES (?, ?, ?, ?, ?, ?, ?)`;
+  const query = `INSERT INTO FormData (Name, Email, Role, Message, MarketingEmails, NewsUpdatesEmails, ProductionProcessEmails) VALUES (?, ?, ?, ?, ?, ?, ?)`;
 
   db.query(
     query,
