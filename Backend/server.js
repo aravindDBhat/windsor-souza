@@ -25,7 +25,7 @@ app.use(
   })
 );
 
-app.use(express.static(path.join(__dirname, "./Frontend")));
+app.use(express.static(path.join(__dirname, "../Frontend")));
 
 const db = mysql.createConnection({
   host: "localhost",
@@ -42,7 +42,7 @@ db.connect((err) => {
 });
 
 app.get("/", (req, res) => {
-  res.sendFile(path.join(__dirname, "./Frontend/index.html"));
+  res.sendFile(path.join(__dirname, "../Frontend/index.html"));
 });
 
 app.post("/submit-form", (req, res) => {
@@ -72,7 +72,7 @@ app.post("/submit-form", (req, res) => {
     (err, result) => {
       if (err) {
         console.error("Error inserting data: ", err);
-        return res.status(500).send("Form data not submitted");
+        return res.status(500).send(err.message);
       }
       res.status(200).send("Form data submitted successfully");
     }

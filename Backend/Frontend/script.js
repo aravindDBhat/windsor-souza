@@ -62,7 +62,7 @@ document
       ProductionProcessEmails,
     };
 
-    fetch("https://windsor-souza-7eq1.vercel.app/submit-form", {
+    fetch("https://windsor-souza-1.onrender.com/submit-form", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
