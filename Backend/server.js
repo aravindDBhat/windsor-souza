@@ -45,7 +45,7 @@ app.get("/", (req, res) => {
   res.sendFile(path.join(__dirname, "./Frontend/index.html"));
 });
 
-app.post("/submit-form", (req, res) => {
+app.post("/", (req, res) => {
   const {
     Name,
     Email,
@@ -55,6 +55,7 @@ app.post("/submit-form", (req, res) => {
     NewsUpdatesEmails,
     ProductionProcessEmails,
   } = req.body;
+  console.log(req.body);
 
   const query = `INSERT INTO FormData (Name, Email, Role, Message, MarketingEmails, NewsUpdatesEmails, ProductionProcessEmails) VALUES (?, ?, ?, ?, ?, ?, ?)`;
 
